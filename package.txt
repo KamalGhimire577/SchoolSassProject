@@ -1,0 +1,35 @@
+npm init -y
+npm i express
+npm i -D @types/express
+npm i dotenv
+npm i -D @types/node
+npm i -D nodemon
+npm i -D ts-node
+npm i -D typescript
+npx tsc --init
+npm i sequelize-typescript
+npm i mysql2
+npm i sequelize
+
+
+
+
+npm i  bcrypt
+npm i @types/bcrypt
+
+
+
+
+npm install jsonwebtoken
+npm install --save-dev @types/jsonwebtoken// npm i -D @types/jsonwebtoken same
+
+
+to start or watch project on any chenge
+just do 
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  to
+   "scripts": {
+    "start": "nodemon server.ts"
+  },
