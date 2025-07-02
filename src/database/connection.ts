@@ -4,7 +4,7 @@ import { Sequelize } from "sequelize-typescript";
   
 import { config } from "dotenv";
 config()
-const sequalize = new Sequelize({
+const sequelize = new Sequelize({
   database: process.env.DB_NAME,
   username: process.env.DB_USERNAME,
   password: process.env.PASSWORD,
@@ -13,7 +13,7 @@ const sequalize = new Sequelize({
   port: Number(process.env.DB_PORT),
   models: [__dirname + "/models"],
 });
-sequalize
+sequelize
   .authenticate()
   .then(() => {
     console.log("Authtentication Successful!");
@@ -22,8 +22,8 @@ sequalize
     console.log("Something went wrong:", err);
   });
 
-sequalize.sync({ alter: false }).then(() => {
+sequelize.sync({ alter: false }).then(() => {
   console.log("Migration Successful!");
 });
 
-export default sequalize;
+export default sequelize;
